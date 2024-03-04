@@ -1,0 +1,25 @@
+@include('./components/include/_head.html', {
+'title' : 'ZETTA — Студия текстильного декора | Главная страница',
+'description' : 'Мы предлагаем профессиональные услуги по пошиву штор уже более 25 лет. Наша команда поможет вам создать превосходные шторы, которые станут украшением вашего интерьера.',
+'keywords' : 'zetta, шторы, текстиль, пошив штор, постельное белье, карнизы для штор, мягкие обои, одежда сцены, ковры, ковры ручной сборки, ковры машинной сборки, натяжка ткани на стены',
+'robots' : 'noindex, nofollow'
+})
+
+@include('./components/_header.html')
+<!-- @include('./components/_modals.html') -->
+
+<main class="main">
+    <a class="link" href="#">
+        Подробнее
+        <svg class="link__icon">
+            <use xlink:href="img/sprite.svg#arrow">
+        </svg>
+    </a>
+    <!-- <a class="whatsapp" href="#">
+        <span></span>
+        <span class="whatsapp__icon" aria-hidden="true"></span>
+    </a> -->
+</main>
+
+@include('./components/_footer.html')
+@include('./components/include/_bottom.html')

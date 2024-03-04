@@ -1,0 +1,11 @@
+node_modules
+/.vscode
+/.git
+app
+_dynamic-adaptive.js
+_animation.js
+_spollers.js
+_show-more.js
+_parallax-mouse.js
+_page-navigation.js
+_stepper.js

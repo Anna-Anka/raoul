@@ -1,0 +1,49 @@
+{
+    "extends": "airbnb/base",
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "no-console": "warn",
+        "no-alert": "warn",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true,
+                "optionalDependencies": false,
+                "peerDependencies": false,
+                "bundledDependencies": true,
+                "packageDir": "./"
+            }
+        ],
+        "max-len": "off",
+        "import/prefer-default-export": "off",
+        "linebreak-style": "off",
+        "indent": [
+            "error",
+            4
+        ],
+        "no-mixed-operators": [
+            "error",
+            {
+                "groups": [
+                    [
+                        "+",
+                        "-",
+                        "*",
+                        "/",
+                        "%",
+                        "**"
+                    ]
+                ],
+                "allowSamePrecedence": true
+            }
+        ],
+        "consistent-return": "warn",
+        "array-callback-return": "warn",
+        "no-new": "off",
+        "no-inner-declarations": "warn"
+    }
+}
