@@ -4,9 +4,12 @@
 	$burger-line-height: 2px;
 
 	position: relative;
+	z-index: 100;
+	display: flex;
 	width: $burger-width;
 	height: $burger-height;
-	color: var(--color-black);
+	margin-left: auto;
+	color: var(--color-white);
 
 	&::before,
 	&::after {

@@ -1,8 +1,7 @@
 .burger-menu {
-	display: flex;
-	gap: 30px;
-	align-items: center;
-	margin-right: 40px;
+	@include flex-normal(center, space-between);
+	gap: 40px;
+	z-index: 15;
 
 	@include mq(lg) {
 		position: fixed;
@@ -11,13 +10,13 @@
 		width: 100%;
 		max-width: 270px;
 		margin-right: 0;
-		padding: 40px 24px;
+		padding: 100px 24px 40px;
 		overflow: hidden;
-		background-color: var(--color-white);
+		background-color: var(--color-dark-900);
 		transform: translateX(100%);
 		visibility: hidden;
 		transition: transform 0.5s;
-		@include flex-column-v-start;
+		@include flex-direction($justify-content: flex-start);
 	}
 
 	&--active {
@@ -30,6 +29,12 @@
 			visibility: visible;
 			opacity: 1;
 			transition: transform 0.3s ease-in-out;
+		}
+	}
+
+	.menu {
+		@include mq(lg) {
+			flex-direction: column;
 		}
 	}
 }

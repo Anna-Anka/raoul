@@ -26,7 +26,7 @@
 		height: 24px;
 		background-image: url('../img/icons/eye.svg');
 		transform: translateY(-50%);
-		@include bg-contain;
+		@include bg;
 
 		&::before {
 			position: absolute;

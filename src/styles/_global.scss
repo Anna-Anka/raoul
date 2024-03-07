@@ -1,15 +1,17 @@
 body {
-	color: var(--color-dark-600);
+	color: var(--color-grey-100);
 	font-weight: var(--font-weight-regular);
-	font-size: 16px;
-	font-family: var(--font-family-rubik), Arial, sans-serif;
-	line-height: 1.4;
-	background-color: var(--color-white);
+	font-size: 18px;
+	font-family: var(--font-family-montserrat), Arial, sans-serif;
+	line-height: 1.7;
+	background-color: var(--color-dark-800);
+	letter-spacing: 1%;
+	min-width: 320px;
 }
 
 .container {
 	width: 100%;
-	max-width: 1520px;
+	max-width: 1384px;
 	margin: 0 auto;
 	padding: 0 20px;
 }
@@ -31,89 +33,50 @@ body {
 
 .button {
 	@include flex-normal;
-	padding: 25px 35px;
+	padding: 14px 32px;
 	color: var(--color-white);
-	font-weight: var(--font-weight-medium);
-	line-height: 1;
-	background-color: var(--color-orange-500);
-	@include adaptive-value-base('font-size', 16, 12, 1);
-	@include adaptive-value-base('border-radius', 8, 4, 1);
-	transition: background-color 0.3s, box-shadow 0.3s;
-
-	@include mq(md) {
-		padding: 18px 20px;
-	}
-
-	&:focus-visible {
-		outline: 0;
-		box-shadow: 0 0 0 2px var(--color-orange-500);
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: var(--color-orange-400);
-		}
-	}
-}
-
-.link {
+	line-height: 1.3;
+	font-size: 16px;
+	background-color: var(--color-dark-800);
+	border-radius: 50px;
 	position: relative;
-	padding: 4px 30px 0;
-	color: var(--color-orange-500);
-	font-weight: var(--font-weight-medium);
-	transition: color 0.3s, box-shadow 0.3s;
 
-	use {
-		fill: red;
-		stroke: red;
+	&::before {
+		content: '';
+		position: absolute;
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+		top: -2px;
+		bottom: -2px;
+		left: -2px;
+		right: -2px;
+		background: var(--gradient-main);
+		border-radius: inherit;
+		z-index: -1;
 	}
+	// transition: background-color 0.3s, box-shadow 0.3s;
 
-	// &::before {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	right: 0;
-	// 	width: 24px;
-	// 	height: 24px;
-	// 	background-image: url('../img/icons/arrow.svg');
-	// 	filter: invert(60%) sepia(75%) saturate(2231%) hue-rotate(358deg)
-	// 		brightness(98%) contrast(109%);
-	// 	content: '';
-	// 	@include bg;
+	// &:focus-visible {
+	// 	outline: 0;
+	// 	box-shadow: 0 0 0 2px var(--color-orange-500);
 	// }
 
-	&:focus-visible {
-		outline: 0;
-		box-shadow: 0 0 0 2px var(--color-orange-500);
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			color: var(--color-orange-400);
-
-			&::before {
-				filter: invert(39%) sepia(93%) saturate(2283%) hue-rotate(341deg)
-					brightness(102%) contrast(101%);
-			}
-		}
-	}
+	// @media (any-hover: hover) {
+	// 	&:hover {
+	// 		background-color: var(--color-orange-400);
+	// 	}
+	// }
 }
 
 .title {
-	font-weight: var(--font-weight-medium);
+	font-weight: var(--font-weight-bold);
+	font-family: var(--font-family-gothic);
 	line-height: 1.2;
-	@include adaptive-value-base('font-size', 38, 20, 1);
-	text-transform: uppercase;
-
-	&--large {
-		@include adaptive-value-base('font-size', 52, 24, 1);
-	}
+	@include adaptive-value-base('font-size', 52, 32, 1);
 
 	&--small {
-		@include adaptive-value-base('font-size', 26, 18, 1);
-	}
-
-	&--normalcaps {
-		text-transform: none;
+		line-height: 1.3;
+		@include adaptive-value-base('font-size', 28, 24, 1);
 	}
 }
 
@@ -140,28 +103,6 @@ body {
 	overflow: hidden;
 }
 
-.logo {
-	@include flex-normal;
-	padding: 5px;
-	@include adaptive-value-base('width', 130, 77, 1);
-	@include adaptive-value-base('height', 60, 35, 1);
-	background-color: var(--color-orange-500);
-
-	&:focus-visible {
-		outline: 0;
-		box-shadow: 0 0 0 2px var(--color-orange-500);
-	}
-
-	&__img {
-		@include adaptive-value-base('width', 80, 50, 1);
-		@include adaptive-value-base('height', 20, 12, 1);
-		object-fit: contain;
-	}
-}
-
-.whatsapp {
-}
-
 .swiper-slide {
 	box-sizing: border-box;
 }
@@ -173,11 +114,11 @@ body {
 	z-index: -1;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(var(--color-black), 0.5);
+	background-color: var(--color-black);
 	opacity: 0;
 
 	&--active {
-		z-index: 4;
-		opacity: 1;
+		z-index: 1;
+		opacity: 0.7;
 	}
 }

@@ -2,18 +2,20 @@
 	--color-white: #ffffff;
 	--color-black: #000000;
 
-	--color-dark-600: #2b2e35;
-	--color-grey-600: #7e8085;
-	--color-grey-300: #d4d4d4;
-	--color-grey-150: #f6f6f6;
+	--color-dark-900: #181818;
+	--color-dark-800: #1c1b1b;
+	--color-grey-100: #d8d8d8;
+	--gradient-main: linear-gradient(
+		270deg,
+		#13adc7 0%,
+		#6978d1 66.67%,
+		#945dd6 100%
+	);
 
-	--color-orange-500: #ff5b01;
-	--color-orange-400: #ff8329;
-	--color-yellow-400: #ffbc46;
-	--color-green-300: #80c95e;
-
-	--font-family-rubik: 'Rubik';
+	--font-family-montserrat: 'Montserrat';
+	--font-family-gothic: 'Century Gothic';
 
 	--font-weight-regular: 400;
 	--font-weight-medium: 500;
+	--font-weight-bold: 700;
 }

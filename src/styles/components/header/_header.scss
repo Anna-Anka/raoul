@@ -4,11 +4,53 @@
 	right: 0;
 	left: 0;
 	z-index: 2;
-	padding-left: 100px;
+	@include adaptive-value-base('padding-top', 30, 20, 1);
+	@include adaptive-value-base('padding-bottom', 30, 20, 1);
+	background-color: var(--color-dark-900);
 
 	&--fixed {
 		position: fixed;
 		transform: translateY(0);
 		transition: transform 0.35s ease-out;
+	}
+
+	.menu {
+		display: flex;
+		gap: 30px;
+		align-items: center;
+		font-size: 16px;
+		line-height: 1.3;
+	}
+}
+
+.socials {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+
+	@include mq(lg) {
+		flex-wrap: wrap;
+		gap: 28px;
+		justify-content: center;
+	}
+
+	&__link {
+		position: relative;
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		@include bg;
+
+		&::before {
+			@include mq(lg) {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 40px;
+				height: 40px;
+				transform: translate(-50%, -50%);
+				content: '';
+			}
+		}
 	}
 }
