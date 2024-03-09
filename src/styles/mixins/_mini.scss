@@ -16,6 +16,18 @@
 	content: '';
 }
 
+@mixin psevdo-gradient($value) {
+	position: absolute;
+	top: $value;
+	right: $value;
+	bottom: $value;
+	left: $value;
+	z-index: -1;
+	background-image: var(--gradient-main);
+	border-radius: inherit;
+	content: '';
+}
+
 @mixin image-set($pathToImage) {
 	background-image: url('#{$pathToImage}.jpg');
 	background-image: image-set(

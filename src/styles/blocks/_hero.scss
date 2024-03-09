@@ -1,0 +1,66 @@
+.hero {
+	&__wrapper {
+		@include flex-normal($justify-content: space-between);
+		gap: 40px;
+
+		@include mq(lg) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__content {
+		gap: 28px;
+		width: 100%;
+		max-width: 640px;
+		@include flex-direction(
+			$align-items: flex-start,
+			$justify-content: flex-start
+		);
+
+		@include mq(lg) {
+			align-items: center;
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		@include adaptive-value-base('font-size', 48, 24, 1);
+		letter-spacing: 0.02rem;
+	}
+
+	&__subtitle {
+		font-weight: 700;
+		@include adaptive-value-base('font-size', 70, 34, 1);
+		background-image: var(--gradient-main);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__title,
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__image {
+		position: relative;
+		@include adaptive-value-base('flex-basis', 380, 240, 1);
+		@include adaptive-value-base('height', 380, 240, 1);
+		flex-shrink: 0;
+		border-radius: 50%;
+
+		&::before {
+			@include psevdo-gradient(-8px);
+		}
+	}
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		border-radius: inherit;
+	}
+}

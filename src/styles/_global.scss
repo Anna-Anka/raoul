@@ -6,7 +6,6 @@ body {
 	line-height: 1.7;
 	background-color: var(--color-dark-800);
 	letter-spacing: 0.01rem;
-	// min-width: 320px;
 }
 
 .container {
@@ -50,15 +49,7 @@ body {
 		position: relative;
 
 		&::before {
-			content: '';
-			position: absolute;
-			top: -2px;
-			bottom: -2px;
-			left: -2px;
-			right: -2px;
-			background-image: var(--gradient-main);
-			border-radius: inherit;
-			z-index: -1;
+			@include psevdo-gradient(-2px);
 		}
 		// transition: background-color 0.3s, box-shadow 0.3s;
 
