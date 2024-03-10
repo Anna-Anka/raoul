@@ -1,0 +1,39 @@
+.directions {
+	&__top,
+	&__text {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__top {
+		width: 100%;
+		text-align: center;
+		@include adaptive-value-base('margin-bottom', 60, 40, 1);
+		@include adaptive-value-base('gap', 12, 8, 1);
+
+		@include mq(lg, min) {
+			max-width: 665px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__title {
+		@include adaptive-value-base('margin-bottom', 28, 20, 1);
+	}
+
+	&__text {
+		@include adaptive-value-base('gap', 12, 8, 1);
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	&__item {
+		flex-grow: 1;
+		width: 300px;
+	}
+}

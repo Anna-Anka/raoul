@@ -1,0 +1,12 @@
+<article class="direction-card">
+    <span class="direction-card__icon" style="background-image: url('img/icons/directions/@icon.svg');" aria-hidden></span>
+    <div class="direction-card__content">
+        <h3 class="direction-card__title title title--small">@title</h3>
+        <div class="direction-card__text">
+            @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+        </div>
+        @if (typeof link !== 'undefined' && link) {
+        <a class="direction-card__link" href="#"> @link </a>
+        }
+    </div>
+</article>

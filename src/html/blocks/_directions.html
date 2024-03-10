@@ -1,0 +1,38 @@
+<section class="directions section">
+    <div class="container">
+        <div class="directions__top">
+            <h2 class="directions__title title">
+                В каких направленияx я работаю?
+            </h2>
+            <div class="directions__text">
+                <p>
+                    А также монтажер и комьюнити-менеджер в игровой индустрии! Помогу вам в создании медиа контента любого типа
+                </p>
+            </div>
+        </div>
+        <ul class="directions__items">
+            <li class="directions__item">
+                @include('../components/cards/_direction-card.html', {
+                'icon' : 'smm',
+                'title' : 'SMM-менеджемент',
+                'text' : ['Сюда входит анализ конкурентов, наполнение контент-плана и и выстраивание воронки продаж ваших товаров/услуг']
+                })
+            </li>
+            <li class="directions__item">
+                @include('../components/cards/_direction-card.html', {
+                'icon' : 'video',
+                'title' : 'Видео монтаж',
+                'text' : ['Моей рабочей лошадкой является Premiere Pro (как и в целом любые другие продукты Adobe). С моими видео работами можно ознакомиться в Портфолио'],
+                'link' : 'Посмотреть работы'
+                })
+            </li>
+            <li class="directions__item">
+                @include('../components/cards/_direction-card.html', {
+                'icon' : 'content',
+                'title' : 'Контент-мейкер',
+                'text' : ['2D графика и дизайн постов для предложки; отчётные презентации; тематические мемы о вашем продукте для подписчиков и динамичные Shorts в 9:16. Грамотно излагаю мысли в своих ТЗ для дизайнеров, исключая двусмысленность']
+                })
+            </li>
+        </ul>
+    </div>
+</section>
