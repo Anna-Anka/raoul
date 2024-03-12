@@ -29,17 +29,29 @@
 			max-width: 600px;
 		}
 
-		ul {
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-			padding-left: 18px;
-			list-style: outside;
-			list-style-image: url('../img/icons/circle-gradient.svg');
+		p {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
 		}
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding-left: 18px;
+		list-style: outside;
+		list-style-image: url('../img/icons/circle-gradient.svg');
 
 		li {
 			@include adaptive-value-base('padding-left', 8, 4, 1);
+		}
+
+		ul {
+			li {
+				@include adaptive-value-base('padding-left', 16, 4, 1);
+			}
 		}
 	}
 

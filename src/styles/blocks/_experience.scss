@@ -53,13 +53,18 @@
 		}
 
 		&__nav-btn {
-			color: var(--color-dark-600);
-			transition: color 0.3s;
-			white-space: nowrap;
 			min-width: 180px;
+			color: var(--color-dark-600);
+			white-space: nowrap;
+			transition: color 0.3s;
 
 			&--active {
 				color: var(--color-white);
+				background-color: transparent;
+			}
+
+			&:focus {
+				color: var(--color-dark-600);
 				background-color: transparent;
 			}
 
