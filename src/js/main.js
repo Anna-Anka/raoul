@@ -1,2 +1,2 @@
 import './_include';
-import './_project';
+import './project';

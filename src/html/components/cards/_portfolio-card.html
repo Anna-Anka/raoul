@@ -1,0 +1,52 @@
+<article class="portfolio-card">
+    <div class="portfolio-card__swiper swiper">
+        <ul class="portfolio-card__items swiper-wrapper">
+            <li class="portfolio-card__item swiper-slide">
+                <a href="img/portfolio/smm/1.jpg" data-fancybox="1">
+                    <picture>
+                        <source srcset="img/portfolio/smm/1.avif" type="image/avif">
+                        <source srcset="img/portfolio/smm/1.webp" type="image/webp">
+                        <img class="portfolio-card__img" src="img/portfolio/smm/1.jpg" alt="Фото" width="655" height="360" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+            <li class="portfolio-card__item swiper-slide">
+                <iframe src="https://www.youtube.com/embed/9pZjtai76JA?si=Uf1pZKWzI_mAyI0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </li>
+            <li class="portfolio-card__item swiper-slide">
+                <a href="https://www.youtube.com/watch?v=9pZjtai76JA" data-fancybox="1">
+                    <picture>
+                        <source srcset="img/portfolio/smm/1.avif" type="image/avif">
+                        <source srcset="img/portfolio/smm/1.webp" type="image/webp">
+                        <img class="portfolio-card__img" src="img/portfolio/smm/1.jpg" alt="Фото" width="655" height="360" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+            <li class="portfolio-card__item swiper-slide">
+                <a href="https://www.youtube.com/shorts/3nEke05lvHo" data-fancybox="1">
+                    <picture>
+                        <source srcset="img/portfolio/smm/1.avif" type="image/avif">
+                        <source srcset="img/portfolio/smm/1.webp" type="image/webp">
+                        <img class="portfolio-card__img" src="img/portfolio/smm/1.jpg" alt="Фото" width="655" height="360" loading="lazy">
+                    </picture>
+                </a>
+            </li>
+        </ul>
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="portfolio-card__content">
+        <h3 class="portfolio-card__title title title--small">@title</h3>
+        <div class="portfolio-card__text">
+            @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p>
+                }
+        </div>
+        <ul class="portfolio-card__links">
+            @for (var i = 0; i < links.length; i++) { <li>
+                <a class="portfolio-card__link" href=`+links[i].href+` target="_blank">
+                    ` +links[i].text+ `
+                </a>
+                </li>
+                }
+        </ul>
+    </div>
+</article>

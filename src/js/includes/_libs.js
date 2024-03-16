@@ -1,2 +1,8 @@
 import GraphTabs from 'graph-tabs';
-const tabs = new GraphTabs('experience');
+import { Fancybox } from '@fancyapps/ui';
+
+new GraphTabs('experience');
+new GraphTabs('portfolio');
+
+Fancybox.bind();
+
