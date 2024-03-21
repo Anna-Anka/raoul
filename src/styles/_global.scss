@@ -26,10 +26,6 @@ body {
 	flex: 1 1 auto;
 }
 
-.lock {
-	overflow: hidden;
-}
-
 .section {
 	@include adaptive-value-base('padding-top', 160, 100, 1);
 	@include adaptive-value-base('padding-bottom', 160, 100, 1);
