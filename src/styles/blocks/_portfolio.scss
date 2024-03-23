@@ -11,7 +11,7 @@
 			display: flex;
 			justify-content: center;
 			@include adaptive-value-base('gap', 48, 30, 1);
-			@include adaptive-value-base('margin-bottom', 60, 40, 1);
+			@include adaptive-value-base('margin-bottom', 55, 35, 1);
 		}
 
 		&__nav-item {
@@ -37,10 +37,10 @@
 
 		&__nav-btn {
 			&--active {
-				color: var(--color-white);
 				background-color: transparent;
 				background-image: var(--gradient-main);
 				-webkit-background-clip: text;
+				pointer-events: none;
 				-webkit-text-fill-color: transparent;
 			}
 
@@ -49,6 +49,8 @@
 				background-color: transparent;
 				box-shadow: 0 0 0 2px var(--gradient-main);
 			}
+
+			@include hover-white;
 		}
 	}
 }

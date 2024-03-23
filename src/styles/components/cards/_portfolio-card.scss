@@ -43,8 +43,6 @@
 	}
 
 	&__link {
-		background-image: var(--gradient-main);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		@include hover-only-line;
 	}
 }
