@@ -36,6 +36,9 @@
 		}
 
 		&__nav-btn {
+			outline: 0;
+			transition: color 0.3s, box-shadow 0.3s;
+
 			&--active {
 				background-color: transparent;
 				background-image: var(--gradient-main);
@@ -47,10 +50,14 @@
 			&:focus {
 				color: var(--color-white);
 				background-color: transparent;
-				box-shadow: 0 0 0 2px var(--gradient-main);
 			}
 
+			@include focus-visible;
 			@include hover-white;
+
+			&:active {
+				color: var(--color-grey-500);
+			}
 		}
 	}
 }

@@ -1,17 +1,23 @@
 .header {
 	position: relative;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 2;
-	@include adaptive-value-base('padding-top', 30, 20, 1);
-	@include adaptive-value-base('padding-bottom', 30, 20, 1);
-	background-color: var(--color-dark-900);
+	z-index: 20;
+	height: 94px;
 
 	&--fixed {
 		position: fixed;
 		transform: translateY(0);
 		transition: transform 0.35s ease-out;
+	}
+
+	&__wrapper {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
+		background-color: var(--color-dark-900);
+		@include adaptive-value-base('padding-top', 30, 20, 1);
+		@include adaptive-value-base('padding-bottom', 30, 20, 1);
 	}
 
 	.menu {
@@ -23,12 +29,15 @@
 
 		&__link {
 			outline: 0;
+			transition: box-shadow 0.3s, border-radius 0.3s, color 0.3s;
 
-			&:focus-visible {
-				box-shadow: 0 0 0 2px #6978d1;
-			}
+			@include focus-visible;
 
 			@include hover-white;
+
+			&:active {
+				color: var(--color-grey-500);
+			}
 		}
 	}
 }

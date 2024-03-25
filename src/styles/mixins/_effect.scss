@@ -45,12 +45,11 @@
 @mixin hover-only-line {
 	position: relative;
 	padding-bottom: 5px;
+	background-image: var(--gradient-main);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 	@media (any-hover: hover) {
-		background-image: var(--gradient-main);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-
 		&:after {
 			position: absolute;
 			bottom: 0;
@@ -70,5 +69,12 @@
 				opacity: 0.7;
 			}
 		}
+	}
+}
+
+@mixin focus-visible {
+	&:focus-visible {
+		border-radius: 2px;
+		box-shadow: 0 0 0 2px var(--color-blue-400);
 	}
 }

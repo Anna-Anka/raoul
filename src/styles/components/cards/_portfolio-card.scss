@@ -41,8 +41,4 @@
 		padding-top: 24px;
 		border-top: 2px solid var(--color-dark-600);
 	}
-
-	&__link {
-		@include hover-only-line;
-	}
 }
