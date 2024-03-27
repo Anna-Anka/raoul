@@ -1,0 +1,34 @@
+.experience-card {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+
+	&__top {
+		@include flex-normal($justify-content: space-between);
+		gap: 20px;
+
+		@include mq(lg, min) {
+			display: none;
+		}
+	}
+
+	&__year {
+		font-size: 16px;
+		font-family: var(--font-family-gothic);
+		line-height: 1.3;
+	}
+
+	&__text {
+		p {
+			&:not(:last-child) {
+				margin-bottom: 8px;
+			}
+		}
+	}
+
+	&__link {
+		align-self: flex-start;
+		font-family: var(--font-family-gothic);
+		line-height: 1.3;
+	}
+}

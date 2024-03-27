@@ -5,8 +5,10 @@
         <div class="direction-card__text">
             @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
         </div>
-        @if (typeof link !== 'undefined' && link) {
-        <a class="direction-card__link link-gradient" href="#"> @link </a>
+        @if (typeof href !== 'undefined' && href) {
+        <a class="direction-card__link link-gradient" href="@href">
+            Посмотреть работу
+        </a>
         }
     </div>
 </article>
