@@ -14,13 +14,6 @@
 		width: 100%;
 		height: 360px;
 		border-radius: 20px 20px 0 0;
-
-		img,
-		a,
-		iframe {
-			width: 100%;
-			height: 100%;
-		}
 	}
 
 	&__text {
@@ -40,5 +33,60 @@
 		gap: 20px;
 		padding-top: 24px;
 		border-top: 2px solid var(--color-dark-600);
+	}
+
+	&__button {
+		top: 50%;
+		background-color: var(--color-dark-800);
+		border-radius: 50%;
+
+		&::after {
+			top: 50%;
+			left: 50%;
+			width: 28px;
+			height: 28px;
+			transform: translate(-50%, -50%);
+		}
+
+		&--prev {
+			&::after {
+				transform: translate(-50%, -50%) rotate(180deg);
+			}
+		}
+	}
+}
+
+.video {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px 20px 0 0;
+	cursor: pointer;
+
+	iframe,
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: inherit;
+	}
+
+	&__play {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 80px;
+			height: 80px;
+			background-image: url('../img/icons/youtube.svg');
+			transform: translate(-50%, -50%);
+			content: '';
+			@include bg;
+		}
 	}
 }

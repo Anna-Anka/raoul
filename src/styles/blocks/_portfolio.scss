@@ -60,4 +60,28 @@
 			}
 		}
 	}
+
+	&__wrapper {
+		position: relative;
+		padding-bottom: 80px;
+	}
+
+	&__swiper {
+		position: unset;
+	}
+
+	&__button {
+		top: unset;
+		bottom: 0;
+
+		&--next {
+			right: 49%;
+			transform: translateX(100%);
+		}
+
+		&--prev {
+			left: 49%;
+			transform: translateX(-100%);
+		}
+	}
 }

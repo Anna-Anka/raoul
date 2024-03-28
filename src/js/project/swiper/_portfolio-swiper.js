@@ -8,28 +8,26 @@ if (document.querySelectorAll('.portfolio__swiper')) {
     const sliders = document.querySelectorAll('.portfolio__swiper');
     sliders.forEach(slider => {
         new Swiper(slider, {
-
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 20,
+            allowTouchMove: false,
 
             navigation: {
-                nextEl: slider.querySelector('.swiper-button-next'),
-                prevEl: slider.querySelector('.swiper-button-prev'),
+                nextEl: slider.querySelector('.portfolio__button--next'),
+                prevEl: slider.querySelector('.portfolio__button--prev'),
             },
 
-            // breakpoints: {
-            //     577: {
-            //         slidesPerView: 'auto',
-            //         spaceBetween: 40,
-            //     },
+            breakpoints: {
+                767: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 20,
+                },
 
-            //     320: {
-            //         slidesPerView: 1,
-            //         slidesPerGroup: 1,
-            //         spaceBetween: 20,
-            //     }
-            // }
+                320: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                    spaceBetween: 20,
+                }
+            }
         });
     });
 }

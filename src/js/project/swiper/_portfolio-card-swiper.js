@@ -1,8 +1,8 @@
 import Swiper, {
-    Navigation, Pagination, Autoplay
+    Navigation, Autoplay,
 } from 'swiper';
 
-Swiper.use([Navigation, Pagination, Autoplay]);
+Swiper.use([Navigation, Autoplay]);
 if (document.querySelectorAll('.portfolio-card__swiper')) {
     const sliders = document.querySelectorAll('.portfolio-card__swiper')
     sliders.forEach(slider => {
@@ -10,16 +10,15 @@ if (document.querySelectorAll('.portfolio-card__swiper')) {
             slidesPerView: 1,
             slidesPerGroup: 1,
             spaceBetween: 10,
-            autoplay: {
-                delay: 5000,
-                pauseOnMouseEnter: true,
-                disableOnInteraction: false
-            },
+            // autoplay: {
+            //     delay: 5000,
+            //     pauseOnMouseEnter: true,
+            //     disableOnInteraction: false
+            // },
 
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: true,
+            navigation: {
+                nextEl: slider.querySelector('.portfolio-card__button--next'),
+                prevEl: slider.querySelector('.portfolio-card__button--prev'),
             },
         });
 
