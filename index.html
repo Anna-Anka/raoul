@@ -32,27 +32,27 @@
                 <nav class="header__navigation">
                     <ul class="menu">
                         <li class="menu__item">
-                            <a class="menu__link" href="#" data-hover="Экспертиза" data-menu-link>
+                            <a class="menu__link" href="#about" data-hover="Экспертиза" data-scroll data-menu-link>
                                 Экспертиза
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#" data-hover="Направления" data-menu-link>
+                            <a class="menu__link" href="#directions" data-hover="Направления" data-scroll data-menu-link>
                                 Направления
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#" data-hover="Портфолио" data-menu-link>
+                            <a class="menu__link" href="#portfolio" data-hover="Портфолио" data-scroll data-menu-link>
                                 Портфолио
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#" data-hover="Опыт работы" data-menu-link>
+                            <a class="menu__link" href="#experience" data-hover="Опыт работы" data-scroll data-menu-link>
                                 Опыт работы
                             </a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#" data-hover="Контакты" data-menu-link>
+                            <a class="menu__link" href="#contacts" data-hover="Контакты" data-scroll data-menu-link>
                                 Контакты
                             </a>
                         </li>
@@ -126,7 +126,7 @@
         </div>
     </div>
 </section>
-        <section class="about section">
+        <section class="about section" id="about">
     <div class="container">
         <h2 class="about__title title">
             Обо мне
@@ -214,7 +214,7 @@
         </div>
     </div>
 </section>
-        <section class="directions section">
+        <section class="directions section" id="directions">
     <div class="container">
         <div class="directions__top">
             <h2 class="directions__title title">
@@ -233,7 +233,7 @@
     <div class="direction-card__content">
         <h3 class="direction-card__title title title--small">SMM-менеджемент</h3>
         <div class="direction-card__text">
-             <p> Сюда входит анализ конкурентов, наполнение контент-плана и и выстраивание воронки продаж ваших товаров/услуг. </p> 
+             <p> Сюда входит анализ конкурентов, наполнение контент-плана и выстраивание воронки продаж ваших товаров/услуг. </p> 
         </div>
         
     </div>
@@ -248,7 +248,9 @@
              <p> Моей рабочей лошадкой является Premiere Pro. С моими видео работами можно ознакомиться в Портфолио. </p> 
         </div>
         
-        <a class="direction-card__link link-gradient" href="#"> Посмотреть работы </a>
+        <a class="direction-card__link link-gradient" href="#portfolio">
+            Посмотреть работу
+        </a>
         
     </div>
 </article>
@@ -268,7 +270,7 @@
         </ul>
     </div>
 </section>
-        <section class="portfolio section">
+        <section class="portfolio section" id="portfolio">
     <div class="container">
         <h2 class="portfolio__title title">
             Портфолио
@@ -293,10 +295,11 @@
             </ul>
             <div class="tabs__content">
                 <div class="tabs__panel">
-                    <div class="portfolio__swiper swiper">
-                        <ul class="portfolio__items swiper-wrapper">
-                            <li class="portfolio__item swiper-slide">
-                                <article class="portfolio-card">
+                    <div class="portfolio__wrapper">
+                        <div class="portfolio__swiper swiper">
+                            <ul class="portfolio__items swiper-wrapper">
+                                <li class="portfolio__item swiper-slide">
+                                    <article class="portfolio-card">
     <div class="portfolio-card__swiper swiper">
         <ul class="portfolio-card__items swiper-wrapper">
             <li class="portfolio-card__item swiper-slide">
@@ -309,22 +312,26 @@
                 </a>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <a href="img/portfolio/smm/1.jpg" data-fancybox="1">
-                    <picture>
-                        <source srcset="img/portfolio/smm/1.avif" type="image/avif">
-                        <source srcset="img/portfolio/smm/1.webp" type="image/webp">
-                        <img class="portfolio-card__img" src="img/portfolio/smm/1.jpg" alt="Фото" width="655" height="360" loading="lazy">
-                    </picture>
-                </a>
+                <div class="video" data-video="https://youtu.be/9pZjtai76JA">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/9pZjtai76JA?si=Uf1pZKWzI_mAyI0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </li>
-            <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/vmwWEw4f5SI?si=TXY4E5PgQMnOf5q0?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video" data-video="https://youtu.be/vmwWEw4f5SI">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
         </ul>
-        <div class="swiper-pagination"></div>
+        <button class="portfolio-card__button portfolio-card__button--prev swiper-button-prev" type="button">
+        </button>
+        <button class="portfolio-card__button portfolio-card__button--next swiper-button-next" type="button">
+        </button>
     </div>
     <div class="portfolio-card__content">
         <h3 class="portfolio-card__title title title--small">Вокзал 1853</h3>
@@ -348,9 +355,9 @@
         </ul>
     </div>
 </article>
-                            </li>
-                            <li class="portfolio__item swiper-slide">
-                                <article class="portfolio-card">
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    <article class="portfolio-card">
     <div class="portfolio-card__swiper swiper">
         <ul class="portfolio-card__items swiper-wrapper">
             <li class="portfolio-card__item swiper-slide">
@@ -363,22 +370,26 @@
                 </a>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <a href="img/portfolio/smm/1.jpg" data-fancybox="1">
-                    <picture>
-                        <source srcset="img/portfolio/smm/1.avif" type="image/avif">
-                        <source srcset="img/portfolio/smm/1.webp" type="image/webp">
-                        <img class="portfolio-card__img" src="img/portfolio/smm/1.jpg" alt="Фото" width="655" height="360" loading="lazy">
-                    </picture>
-                </a>
+                <div class="video" data-video="https://youtu.be/9pZjtai76JA">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/9pZjtai76JA?si=Uf1pZKWzI_mAyI0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </li>
-            <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/vmwWEw4f5SI?si=TXY4E5PgQMnOf5q0?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video" data-video="https://youtu.be/vmwWEw4f5SI">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
         </ul>
-        <div class="swiper-pagination"></div>
+        <button class="portfolio-card__button portfolio-card__button--prev swiper-button-prev" type="button">
+        </button>
+        <button class="portfolio-card__button portfolio-card__button--next swiper-button-next" type="button">
+        </button>
     </div>
     <div class="portfolio-card__content">
         <h3 class="portfolio-card__title title title--small">Вокзал 1853</h3>
@@ -402,9 +413,9 @@
         </ul>
     </div>
 </article>
-                            </li>
-                            <li class="portfolio__item swiper-slide">
-                                <article class="portfolio-card">
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    <article class="portfolio-card">
     <div class="portfolio-card__swiper swiper">
         <ul class="portfolio-card__items swiper-wrapper">
             <li class="portfolio-card__item swiper-slide">
@@ -417,22 +428,26 @@
                 </a>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <a href="img/portfolio/smm/1.jpg" data-fancybox="1">
-                    <picture>
-                        <source srcset="img/portfolio/smm/1.avif" type="image/avif">
-                        <source srcset="img/portfolio/smm/1.webp" type="image/webp">
-                        <img class="portfolio-card__img" src="img/portfolio/smm/1.jpg" alt="Фото" width="655" height="360" loading="lazy">
-                    </picture>
-                </a>
+                <div class="video" data-video="https://youtu.be/9pZjtai76JA">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/9pZjtai76JA?si=Uf1pZKWzI_mAyI0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </li>
-            <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/vmwWEw4f5SI?si=TXY4E5PgQMnOf5q0?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video" data-video="https://youtu.be/vmwWEw4f5SI">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
         </ul>
-        <div class="swiper-pagination"></div>
+        <button class="portfolio-card__button portfolio-card__button--prev swiper-button-prev" type="button">
+        </button>
+        <button class="portfolio-card__button portfolio-card__button--next swiper-button-next" type="button">
+        </button>
     </div>
     <div class="portfolio-card__content">
         <h3 class="portfolio-card__title title title--small">Вокзал 1853</h3>
@@ -456,9 +471,9 @@
         </ul>
     </div>
 </article>
-                            </li>
-                            <li class="portfolio__item swiper-slide">
-                                <article class="portfolio-card">
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    <article class="portfolio-card">
     <div class="portfolio-card__swiper swiper">
         <ul class="portfolio-card__items swiper-wrapper">
             <li class="portfolio-card__item swiper-slide">
@@ -471,22 +486,26 @@
                 </a>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <a href="img/portfolio/smm/1.jpg" data-fancybox="1">
-                    <picture>
-                        <source srcset="img/portfolio/smm/1.avif" type="image/avif">
-                        <source srcset="img/portfolio/smm/1.webp" type="image/webp">
-                        <img class="portfolio-card__img" src="img/portfolio/smm/1.jpg" alt="Фото" width="655" height="360" loading="lazy">
-                    </picture>
-                </a>
+                <div class="video" data-video="https://youtu.be/9pZjtai76JA">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
             <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/9pZjtai76JA?si=Uf1pZKWzI_mAyI0F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </li>
-            <li class="portfolio-card__item swiper-slide">
-                <iframe src="https://www.youtube.com/embed/vmwWEw4f5SI?si=TXY4E5PgQMnOf5q0?&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video" data-video="https://youtu.be/vmwWEw4f5SI">
+                    <img src="" alt="video">
+                    <button class="video__play">
+                        <span class="sr-only">play</span>
+                    </button>
+                </div>
             </li>
         </ul>
-        <div class="swiper-pagination"></div>
+        <button class="portfolio-card__button portfolio-card__button--prev swiper-button-prev" type="button">
+        </button>
+        <button class="portfolio-card__button portfolio-card__button--next swiper-button-next" type="button">
+        </button>
     </div>
     <div class="portfolio-card__content">
         <h3 class="portfolio-card__title title title--small">Вокзал 1853</h3>
@@ -510,13 +529,13 @@
         </ul>
     </div>
 </article>
-                            </li>
-                        </ul>
-                        <div class="swiper-pagination"></div>
-                        <button class="portfolio__button portfolio__button--prev swiper-button-prev" type="button">
-                        </button>
-                        <button class="portfolio__button portfolio__button--next swiper-button-next" type="button">
-                        </button>
+                                </li>
+                            </ul>
+                            <button class="portfolio__button portfolio__button--prev swiper-button-prev" type="button">
+                            </button>
+                            <button class="portfolio__button portfolio__button--next swiper-button-next" type="button">
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="tabs__panel">content 2</div>
@@ -525,7 +544,7 @@
         </div>
     </div>
 </section>
-        <section class="experience section">
+        <section class="experience section" id="experience">
     <div class="container">
         <h2 class="experience__title title">
             Опыт работы
@@ -559,41 +578,76 @@
             </ul>
             <div class="tabs__content">
                 <div class="tabs__panel">
-                    <div class="tabs__text">
-                        <p>
-                            Работа над инди проектом стала первой в моем портфолио. Комьюнити-менеджемент сообщества игроков в VK и Discord; еженедельный сбор контента с плейтестов билда — о лучшем «вкатывании» я не мог и мечтать
-                        </p>
-                    </div>
-                    <a class="tabs__link link-gradient" href="#">Посмотреть работу</a>
+                    <div class="experience-card">
+    <div class="experience-card__top">
+        <span class="title title--small">
+            Beast Hour
+        </span>
+        <span class="experience-card__year">2021</span>
+    </div>
+    <div class="experience-card__text">
+         <p> Работа над инди проектом стала первой в моем портфолио. Комьюнити-менеджемент сообщества игроков в VK и Discord; еженедельный сбор контента с плейтестов билда — о лучшем «вкатывании» я не мог и мечтать </p>
+            
+    </div>
+    
+    <a class="experience-card__link link-gradient" href="#">Посмотреть работу</a>
+    
+</div>
                 </div>
                 <div class="tabs__panel">
-                    <div class="tabs__text">
-                        <p>
-                            Больше всего сил и труда я внёс в киберспортивное подразделение Starladder, штаб-квартира которого находится в Украине. Работа с крупнейшими игровыми турнирами по играм Dota 2, CS, PUBG Mobile; потрясающая команда ребят, всегда готовых подстраховать или помочь советом. Хочу отдельно поблагодарить моего тимлида @slavglory за кураторство турниров, в которых я принимал участие.
-                        </p>
-                    </div>
-                    <a class="tabs__link" href="#">Посмотреть работу</a>
+                    <div class="experience-card">
+    <div class="experience-card__top">
+        <span class="title title--small">
+            Starladder
+        </span>
+        <span class="experience-card__year">2022</span>
+    </div>
+    <div class="experience-card__text">
+         <p> Больше всего сил и труда я внёс в киберспортивное подразделение Starladder, штаб-квартира которого находится в Украине. Работа с крупнейшими игровыми турнирами по играм Dota 2, CS, PUBG Mobile; потрясающая команда ребят, всегда готовых подстраховать или помочь советом. Хочу отдельно поблагодарить моего тимлида @slavglory за кураторство турниров, в которых я принимал участие. </p>
+            
+    </div>
+    
+    <a class="experience-card__link link-gradient" href="#">Посмотреть работу</a>
+    
+</div>
                 </div>
                 <div class="tabs__panel">
-                    <div class="tabs__text">
-                        <p>
-                            Не обошлось и без Web3 сферы: амбициозный проект Imversed, предлагающий к покупке виртуальные земли Нью-Йорка. Владельцы могли изменять их свойства и внешний вид, таким образом проецируя их собственный виртуальный кусочек Нью-Йорка в дополненную реальность.
-                        </p>
-                    </div>
+                    <div class="experience-card">
+    <div class="experience-card__top">
+        <span class="title title--small">
+            Imversed
+        </span>
+        <span class="experience-card__year">2023</span>
+    </div>
+    <div class="experience-card__text">
+         <p> Не обошлось и без Web3 сферы: амбициозный проект Imversed, предлагающий к покупке виртуальные земли Нью-Йорка. Владельцы могли изменять их свойства и внешний вид, таким образом проецируя их собственный виртуальный кусочек Нью-Йорка в дополненную реальность. </p>
+            
+    </div>
+    
+</div>
                 </div>
                 <div class="tabs__panel">
-                    <div class="tabs__text">
-                        <p>
-                            Снова геймдев, уникальная идея на рынке. Рассказал игрокам о танцевальном приложении Ritmi с поддержкой гироскопа. Танцуй где угодно, танцуй не хуже вон того сумасшедшего чувака, не вылезающего с цифрового танцевального коврика.
-                        </p>
-                    </div>
-                    <a class="tabs__link link-gradient" href="#">Посмотреть работу</a>
+                    <div class="experience-card">
+    <div class="experience-card__top">
+        <span class="title title--small">
+            Ritmi
+        </span>
+        <span class="experience-card__year">2024</span>
+    </div>
+    <div class="experience-card__text">
+         <p> Снова геймдев, уникальная идея на рынке. Рассказал игрокам о танцевальном приложении Ritmi с поддержкой гироскопа. Танцуй где угодно, танцуй не хуже вон того сумасшедшего чувака, не вылезающего с цифрового танцевального коврика. </p>
+            
+    </div>
+    
+    <a class="experience-card__link link-gradient" href="#">Посмотреть работу</a>
+    
+</div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-        <section class="contacts section">
+        <section class="contacts section" id="contacts">
     <div class="container">
         <div class="contacts__wrapper">
             <h2 class="contacts__title title">
