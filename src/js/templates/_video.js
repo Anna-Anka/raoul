@@ -1,43 +1,43 @@
-export const videoFunction = () => {
-    const videos = document.querySelectorAll('.video');
+// if (document.querySelector('.video')) {
+//     const videos = document.querySelectorAll('.video');
 
-    // generate video url
-    let generateUrl = function (id) {
-        let query = '?rel=0&showinfo=0&autoplay=1';
+//     // generate video url
+//     const generateUrl = (id) => {
+//         const query = '?rel=0&showinfo=0&autoplay=1';
 
-        return 'https://www.youtube.com/embed/' + id + query;
-    };
+//         return 'https://www.youtube.com/embed/' + id + query;
+//     };
 
-    // creating iframe
-    let createIframe = function (id) {
-        let iframe = document.createElement('iframe');
+//     // creating iframe
+//     const createIframe = (id) => {
+//         const iframe = document.createElement('iframe');
 
-        iframe.setAttribute('allowfullscreen', '');
-        iframe.setAttribute('allow', 'autoplay; encrypted-media');
-        iframe.setAttribute('src', generateUrl(id));
+//         iframe.setAttribute('allowfullscreen', '');
+//         iframe.setAttribute('allow', 'autoplay; encrypted-media');
+//         iframe.setAttribute('src', generateUrl(id));
 
-        return iframe;
-    };
+//         return iframe;
+//     };
 
-    // main code
-    videos.forEach((el) => {
-        let videoHref = el.getAttribute('data-video');
+//     // main code
+//     videos.forEach((el) => {
+//         const videoHref = el.getAttribute('data-video');
 
-        let deletedLength = 'https://youtu.be/'.length;
+//         const deletedLength = 'https://youtu.be/'.length;
 
-        let videoId = videoHref.substring(deletedLength, videoHref.length);
+//         const videoId = videoHref.substring(deletedLength, videoHref.length);
 
-        let img = el.querySelector('img');
-        let youtubeImgSrc = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
-        img.setAttribute('src', youtubeImgSrc);
+//         const img = el.querySelector('img');
+//         const youtubeImgSrc = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
+//         img.setAttribute('src', youtubeImgSrc);
 
-        el.addEventListener('click', (e) => {
-            e.preventDefault();
+//         el.addEventListener('click', (e) => {
+//             e.preventDefault();
 
-            let iframe = createIframe(videoId);
-            el.querySelector('img').remove();
-            el.appendChild(iframe);
-            el.querySelector('button').remove();
-        });
-    });
-};
+//             const iframe = createIframe(videoId);
+//             el.querySelector('img').remove();
+//             el.appendChild(iframe);
+//             el.querySelector('button').remove();
+//         });
+//     });
+// }

@@ -7,6 +7,7 @@ Swiper.use([Navigation]);
 if (document.querySelectorAll('.portfolio__swiper')) {
     const sliders = document.querySelectorAll('.portfolio__swiper');
     sliders.forEach(slider => {
+
         new Swiper(slider, {
             allowTouchMove: false,
 
