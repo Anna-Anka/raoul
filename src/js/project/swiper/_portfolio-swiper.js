@@ -6,8 +6,7 @@ Swiper.use([Navigation]);
 
 if (document.querySelectorAll('.portfolio__swiper')) {
     const sliders = document.querySelectorAll('.portfolio__swiper');
-    sliders.forEach(slider => {
-
+    sliders.forEach((slider) => {
         new Swiper(slider, {
             allowTouchMove: false,
 
@@ -27,8 +26,8 @@ if (document.querySelectorAll('.portfolio__swiper')) {
                     slidesPerView: 1,
                     slidesPerGroup: 1,
                     spaceBetween: 20,
-                }
-            }
+                },
+            },
         });
     });
 }

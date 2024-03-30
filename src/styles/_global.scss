@@ -78,13 +78,7 @@ body {
 	width: 44px;
 	height: 44px;
 	margin-top: 0;
-	// border: 2px solid var(--color-white);
 	border-radius: 50%;
-
-	// z-index: 2;
-	// padding: 2px;
-	// overflow: hidden;
-	// background-color: var(--color-dark-800);
 
 	&::after {
 		position: absolute;
@@ -96,30 +90,7 @@ body {
 		transform: translate(-50%, -50%);
 		content: '';
 		@include bg;
-
-		// width: 90%;
-		// height: 90%;
-		// top: 50%;
-		// right: 50%;
-		// transform: translate(-50%, -50%);
-		// position: absolute;
-		// content: '';
-		// z-index: 2;
-		// background-color: var(--color-dark-800);
-		// border-radius: inherit;
 	}
-
-	// &::before {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 200%;
-	// 	height: 100%;
-	// 	background-image: var(--gradient-main);
-	// 	background-size: 50% 100%;
-	// 	border-radius: 50%;
-	// 	content: '';
-	// }
 }
 
 .swiper-button-prev {
