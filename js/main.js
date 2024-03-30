@@ -130,8 +130,8 @@ var videos = document.querySelectorAll('.video');
 
 // generate video url
 var generateUrl = function generateUrl(id) {
-  var query = '?rel=0&showinfo=0&autoplay=1&mute=1';
-  return 'https://www.youtube.com/embed/' + id + query;
+  var query = "?rel=0&showinfo=0&playlist=".concat(id, "&autoplay=1&mute=1&loop=1");
+  return "https://www.youtube.com/embed/".concat(id).concat(query);
 };
 
 // creating iframe
@@ -153,8 +153,8 @@ var prepareVideo = function prepareVideo(element, byClick) {
   var deletedLength = 'https://youtu.be/'.length;
   var videoId = videoHref.substring(deletedLength, videoHref.length);
   var img = element.querySelector('img');
-  var youtubeImgSrc = 'https://i.ytimg.com/vi/' + videoId + '/maxresdefault.jpg';
-  img && img.setAttribute('src', youtubeImgSrc);
+  var youtubeImgSrc = "https://i.ytimg.com/vi/".concat(videoId, "/maxresdefault.jpg");
+  if (img) img.setAttribute('src', youtubeImgSrc);
   if (byClick) {
     element.addEventListener('click', function (e) {
       e.preventDefault();
@@ -167,14 +167,25 @@ var prepareVideo = function prepareVideo(element, byClick) {
 
 // main code
 videos.forEach(function (el) {
-  prepareVideo(el);
+  prepareVideo(el, true);
 });
 var initSliderVideo = function initSliderVideo(swiper) {
   var indexCurrentSlide = swiper.realIndex;
-  var currentSlide = swiper.slides[indexCurrentSlide];
+  var allSlides = swiper.slides;
+  var currentSlide = allSlides[indexCurrentSlide];
+  allSlides.forEach(function (slide) {
+    var video = slide.querySelector('.video');
+    if (video) {
+      var iframe = video.querySelector('iframe');
+      if (iframe) {
+        iframe.remove();
+        video.innerHTML = '<img src="" alt="video"><button class="video__play" aria-label="play video"></button>';
+      }
+    }
+  });
   var video = currentSlide.querySelector('.video');
   if (video) {
-    prepareVideo(video, true);
+    prepareVideo(video, false);
   }
 };
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay]);
@@ -186,7 +197,7 @@ if (document.querySelectorAll('.portfolio-card__swiper')) {
       slidesPerGroup: 1,
       spaceBetween: 10,
       autoplay: {
-        delay: 5000,
+        delay: 15000,
         pauseOnMouseEnter: true,
         disableOnInteraction: false
       },
