@@ -1,19 +1,56 @@
 .portfolio-card {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
 	background-color: var(--color-dark-800);
 	border-radius: 20px;
 
+	&__media {
+		position: relative;
+		flex-shrink: 0;
+		padding-bottom: 56%;
+		border-radius: 20px 20px 0 0;
+	}
+
+	&__swiper {
+		border-radius: inherit;
+
+		@include resize-img;
+	}
+
+	&__picture,
+	&__img {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__img {
+		object-fit: cover;
+	}
+
+	&__button {
+		top: 50%;
+		background-color: var(--color-dark-800);
+		border-radius: 50%;
+
+		&--prev {
+			&::after {
+				transform: translate(-50%, -50%) rotate(180deg);
+			}
+		}
+	}
+
 	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
 		padding: 30px;
 	}
 
 	&__title {
 		margin-bottom: 24px;
-	}
-
-	&__swiper {
-		width: 100%;
-		height: 372px;
-		border-radius: 20px 20px 0 0;
 	}
 
 	&__text {
@@ -31,20 +68,9 @@
 		display: flex;
 		flex-wrap: wrap;
 		gap: 20px;
+		margin-top: auto;
 		padding-top: 24px;
 		border-top: 2px solid var(--color-dark-600);
-	}
-
-	&__button {
-		top: 50%;
-		background-color: var(--color-dark-800);
-		border-radius: 50%;
-
-		&--prev {
-			&::after {
-				transform: translate(-50%, -50%) rotate(180deg);
-			}
-		}
 	}
 }
 

@@ -9,7 +9,6 @@ if (document.querySelectorAll('.portfolio__swiper')) {
     sliders.forEach((slider) => {
         new Swiper(slider, {
             allowTouchMove: false,
-
             navigation: {
                 nextEl: slider.querySelector('.portfolio__button--next'),
                 prevEl: slider.querySelector('.portfolio__button--prev'),
