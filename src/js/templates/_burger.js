@@ -35,8 +35,8 @@ export const burger = () => {
 
     menuLinks.forEach((el) => {
         el.addEventListener('click', () => {
-            burgerButton.classList.remove('burgerbutton-button--active');
-            menu.classList.remove('burgerbutton-menu--active');
+            burgerButton.classList.remove('burger-button--active');
+            menu.classList.remove('burger-menu--active');
             overlay.classList.remove('overlay--active');
             enableScroll();
         });

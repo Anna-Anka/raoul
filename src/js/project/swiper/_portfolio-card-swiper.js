@@ -88,6 +88,10 @@ if (document.querySelectorAll('.portfolio-card__swiper')) {
             slidesPerGroup: 1,
             spaceBetween: 10,
 
+            autoplay: {
+                enabled: false,
+            },
+
             navigation: {
                 nextEl: slider.querySelector('.portfolio-card__button--next'),
                 prevEl: slider.querySelector('.portfolio-card__button--prev'),
@@ -95,17 +99,13 @@ if (document.querySelectorAll('.portfolio-card__swiper')) {
 
             breakpoints: {
                 1024: {
-
                     autoplay: {
-                        delay: 15000,
+                        enabled: true,
+                        delay: 5000,
                         pauseOnMouseEnter: true,
                         disableOnInteraction: false,
                     },
-                },
-
-                320: {
-                    autoplay: false,
-                },
+                }
             },
 
             on: {

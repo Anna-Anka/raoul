@@ -41,6 +41,8 @@ body {
 	font-size: 16px;
 	line-height: 1.3;
 	border-radius: 50px;
+	outline: 0;
+	transition: opacity 0.3s, box-shadow 0.3s;
 
 	&::before {
 		position: absolute;
@@ -61,8 +63,18 @@ body {
 		border-radius: inherit;
 	}
 
-	&:hover:before {
-		animation: rainbow-btn 1s linear infinite;
+	&:focus-visible {
+		box-shadow: 0 0 30px var(--color-blue-400);
+	}
+
+	&:hover {
+		&::before {
+			animation: rainbow-btn 1s linear infinite;
+		}
+	}
+
+	&:active {
+		opacity: 0.8;
 	}
 }
 
