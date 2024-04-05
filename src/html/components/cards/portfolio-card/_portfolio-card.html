@@ -1,0 +1,37 @@
+<article class="portfolio-card">
+    <div class="portfolio-card__media">
+        <div class="portfolio-card__swiper swiper">
+            <ul class="portfolio-card__items swiper-wrapper">
+                @for (var i = 0; i < sliders.length; i++) { <li class="portfolio-card__item swiper-slide">
+                    `+(sliders[i].media === 'video' ?
+                    `@include("./_video-templay.html", {path: "${sliders[i].path}"})` :
+                    `@include("./_picture-templay.html", { path: "${sliders[i].path}" })`)+`
+                    </li>
+                    }
+            </ul>
+
+
+            <button class="portfolio-card__button portfolio-card__button--prev swiper-button-prev" type="button">
+            </button>
+            <button class="portfolio-card__button portfolio-card__button--next swiper-button-next" type="button">
+            </button>
+        </div>
+    </div>
+    <div class="portfolio-card__content">
+        <div class="portfolio-card__box">
+            <h3 class="portfolio-card__title title title--small">@title</h3>
+            <div class="portfolio-card__text">
+                @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p>
+                    }
+            </div>
+        </div>
+        <ul class="portfolio-card__links">
+            @for (var i = 0; i < links.length; i++) { <li>
+                <a class="portfolio-card__link link-gradient" href=`+links[i].href+` target="_blank">
+                    ` +links[i].text+ `
+                </a>
+                </li>
+                }
+        </ul>
+    </div>
+</article>

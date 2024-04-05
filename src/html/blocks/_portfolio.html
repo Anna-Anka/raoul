@@ -27,31 +27,19 @@
                         <div class="portfolio__swiper swiper">
                             <ul class="portfolio__items swiper-wrapper">
                                 <li class="portfolio__item swiper-slide">
-                                    @include('../components/cards/_portfolio-card.html', {
-                                    'title' : 'Вокзал 1853',
-                                    'text' : ['Время от времени, я занимаюсь любительскими разборами интересных гик местечек в Санкт-Петербурге (а порой, и за его пределами).', 'По большей части, я занимаюсь этим для себя. Мне хотелось не просто рассказывать о себе, а быть полезным для всех, кто ищет любопытные места в СПб!'],
-                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-vokzal-1853-puteshestvie-po-zhemchuzhinam-aziatskoi-kulinari'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'picture', path: 'smm/1' }],
+                                    'title' : 'Серия постов про крупнейший гик-фестиваль в СПб:',
+                                    'text' : ['Гик-фестиваль, в рамках которого люди переодеваются в косплей костюмы известных персонажей из видеоигр и фильмов/сериалов. Много разнообразного мерча и станций, посвященных тем или иным вымышленным вселенным'],
+                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-ot-lubvi-do-nenavisti-i-obratno-epic-con-2023'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
                                     })
                                 </li>
                                 <li class="portfolio__item swiper-slide">
-                                    @include('../components/cards/_portfolio-card.html', {
-                                    'title' : 'Вокзал 1853',
-                                    'text' : ['Время от времени, я занимаюсь любительскими разборами интересных гик местечек в Санкт-Петербурге (а порой, и за его пределами).', 'По большей части, я занимаюсь этим для себя. Мне хотелось не просто рассказывать о себе, а быть полезным для всех, кто ищет любопытные места в СПб!'],
-                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-vokzal-1853-puteshestvie-po-zhemchuzhinam-aziatskoi-kulinari'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
-                                    })
-                                </li>
-                                <li class="portfolio__item swiper-slide">
-                                    @include('../components/cards/_portfolio-card.html', {
-                                    'title' : 'Вокзал 1853',
-                                    'text' : ['Время от времени, я занимаюсь любительскими разборами интересных гик местечек в Санкт-Петербурге (а порой, и за его пределами).', 'По большей части, я занимаюсь этим для себя. Мне хотелось не просто рассказывать о себе, а быть полезным для всех, кто ищет любопытные места в СПб!'],
-                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-vokzal-1853-puteshestvie-po-zhemchuzhinam-aziatskoi-kulinari'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
-                                    })
-                                </li>
-                                <li class="portfolio__item swiper-slide">
-                                    @include('../components/cards/_portfolio-card.html', {
-                                    'title' : 'Вокзал 1853',
-                                    'text' : ['Время от времени, я занимаюсь любительскими разборами интересных гик местечек в Санкт-Петербурге (а порой, и за его пределами).', 'По большей части, я занимаюсь этим для себя. Мне хотелось не просто рассказывать о себе, а быть полезным для всех, кто ищет любопытные места в СПб!'],
-                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-vokzal-1853-puteshestvie-po-zhemchuzhinam-aziatskoi-kulinari'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'picture', path: 'smm/1' }],
+                                    'title' : 'Серия постов про крупнейший гик-фестиваль в СПб:',
+                                    'text' : ['Гик-фестиваль, в рамках которого люди переодеваются в косплей костюмы известных персонажей из видеоигр и фильмов/сериалов. Много разнообразного мерча и станций, посвященных тем или иным вымышленным вселенным'],
+                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-ot-lubvi-do-nenavisti-i-obratno-epic-con-2023'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
                                     })
                                 </li>
                             </ul>
@@ -62,7 +50,51 @@
                         </div>
                     </div>
                 </div>
-                <div class="tabs__panel">content 2</div>
+                <div class="tabs__panel">
+                    <div class="portfolio__wrapper">
+                        <div class="portfolio__swiper swiper">
+                            <ul class="portfolio__items swiper-wrapper">
+                                <li class="portfolio__item swiper-slide">
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'video', path: 'https://youtu.be/9pZjtai76JA' }, { media: 'video', path: 'https://youtu.be/vmwWEw4f5SI' }],
+                                    'title' : 'Серия постов про крупнейший гик-фестиваль в СПб:',
+                                    'text' : ['Гик-фестиваль, в рамках которого люди переодеваются в косплей костюмы известных персонажей из видеоигр и фильмов/сериалов. Много разнообразного мерча и станций, посвященных тем или иным вымышленным вселенным'],
+                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-ot-lubvi-do-nenavisti-i-obratno-epic-con-2023'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
+                                    })
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'video', path: 'https://youtu.be/9pZjtai76JA' }, { media: 'video', path: 'https://youtu.be/vmwWEw4f5SI' }],
+                                    'title' : 'Серия постов про крупнейший гик-фестиваль в СПб:',
+                                    'text' : ['Гик-фестиваль, в рамках которого люди переодеваются в косплей костюмы известных персонажей из видеоигр и фильмов/сериалов. Много разнообразного мерча и станций, посвященных тем или иным вымышленным вселенным'],
+                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-ot-lubvi-do-nenavisti-i-obratno-epic-con-2023'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
+                                    })
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'video', path: 'https://youtu.be/9pZjtai76JA' }, { media: 'video', path: 'https://youtu.be/vmwWEw4f5SI' }],
+                                    'title' : 'Серия постов про крупнейший гик-фестиваль в СПб:',
+                                    'text' : ['Гик-фестиваль, в рамках которого люди переодеваются в косплей костюмы известных персонажей из видеоигр и фильмов/сериалов. Много разнообразного мерча и станций, посвященных тем или иным вымышленным вселенным'],
+                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-ot-lubvi-do-nenavisti-i-obratno-epic-con-2023'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
+                                    })
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'video', path: 'https://youtu.be/9pZjtai76JA' }, { media: 'video', path: 'https://youtu.be/vmwWEw4f5SI' }],
+                                    'title' : 'Серия постов про крупнейший гик-фестиваль в СПб:',
+                                    'text' : ['Гик-фестиваль, в рамках которого люди переодеваются в косплей костюмы известных персонажей из видеоигр и фильмов/сериалов. Много разнообразного мерча и станций, посвященных тем или иным вымышленным вселенным'],
+                                    'links' : [{ text: 'Пост', href: 'https://vk.com/@ginematic-ot-lubvi-do-nenavisti-i-obratno-epic-con-2023'}, { text: 'Еще больше постов', href: 'https://vk.com/ginematic' }]
+                                    })
+                                </li>
+                            </ul>
+                            <button class="portfolio__button portfolio__button--prev swiper-button-prev" type="button">
+                            </button>
+                            <button class="portfolio__button portfolio__button--next swiper-button-next" type="button">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="tabs__panel">content 3</div>
             </div>
         </div>

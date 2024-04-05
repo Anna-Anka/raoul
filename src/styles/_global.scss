@@ -31,86 +31,6 @@ body {
 	@include adaptive-value-base('padding-bottom', 160, 100, 1);
 }
 
-.button {
-	@include flex-normal;
-	position: relative;
-	z-index: 2;
-	padding: 2px;
-	overflow: hidden;
-	color: var(--color-white);
-	font-size: 16px;
-	line-height: 1.3;
-	border-radius: 50px;
-	outline: 0;
-	transition: opacity 0.3s, box-shadow 0.3s;
-
-	&::before {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 200%;
-		height: 100%;
-		background-image: var(--gradient-main);
-		background-size: 50% 100%;
-		border-radius: inherit;
-		content: '';
-	}
-
-	span {
-		z-index: 2;
-		padding: 14px 32px;
-		background-color: var(--color-dark-800);
-		border-radius: inherit;
-	}
-
-	&:focus-visible {
-		box-shadow: 0 0 30px var(--color-blue-400);
-	}
-
-	&:hover {
-		&::before {
-			animation: rainbow-btn 1s linear infinite;
-		}
-	}
-
-	&:active {
-		opacity: 0.8;
-	}
-}
-
-@keyframes rainbow-btn {
-	to {
-		transform: translateX(-50%);
-	}
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-	position: absolute;
-	width: 44px;
-	height: 44px;
-	margin-top: 0;
-	border-radius: 50%;
-
-	&::after {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 24px;
-		height: 24px;
-		background-image: url('../img/icons/arrow.svg');
-		transform: translate(-50%, -50%);
-		content: '';
-		@include bg;
-	}
-}
-
-.swiper-button-prev {
-	&::after {
-		transform: rotate(180deg) translate(50%, 50%);
-	}
-}
-
 .link-gradient {
 	outline: 0;
 	transition: opacity 0.3s, box-shadow 0.3s, border-radius 0.3s;
@@ -156,10 +76,6 @@ body {
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;
-}
-
-.swiper-slide {
-	box-sizing: border-box;
 }
 
 .overlay {

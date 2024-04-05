@@ -79,9 +79,8 @@ const initSliderVideo = (swiper) => {
     }
 };
 
-Swiper.use([Navigation, Autoplay]);
-if (document.querySelectorAll('.portfolio-card__swiper')) {
-    const sliders = document.querySelectorAll('.portfolio-card__swiper');
+const initSwiper = () => {
+    const sliders = document.querySelectorAll('.portfolio .tabs__panel--active .portfolio-card__swiper');
     sliders.forEach((slider) => {
         const swiperInstance = new Swiper(slider, {
             slidesPerView: 1,
@@ -123,4 +122,22 @@ if (document.querySelectorAll('.portfolio-card__swiper')) {
             swiperInstance.autoplay.stop();
         });
     });
+}
+
+if (document.querySelector('.portfolio .tabs__nav-btn')) {
+    const blockPortfolio = document.querySelector('.portfolio');
+    const allButtonTabs = blockPortfolio.querySelectorAll('.tabs__nav-btn');
+
+    const onClickHandler = () => {
+        initSwiper()
+    }
+
+    allButtonTabs.forEach((button) => {
+        button.addEventListener('click', onClickHandler)
+    })
+}
+
+Swiper.use([Navigation, Autoplay]);
+if (document.querySelectorAll('.portfolio-card__swiper')) {
+    initSwiper();
 }
