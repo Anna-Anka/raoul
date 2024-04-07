@@ -84,9 +84,6 @@ _fancyapps_ui__WEBPACK_IMPORTED_MODULE_1__.Fancybox.bind();
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _templates_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../templates/_burger */ "./src/js/templates/_burger.js");
 
-// import { headerSticky } from '../templates/_header-sticky';
-
-// headerSticky();
 (0,_templates_burger__WEBPACK_IMPORTED_MODULE_0__.burger)();
 
 /***/ }),
@@ -324,7 +321,6 @@ var burger = function burger() {
       burgerButton.setAttribute('aria-expanded', 'true');
       burgerButton.setAttribute('aria-label', 'закрыть меню');
       (0,_utils_disable_scroll__WEBPACK_IMPORTED_MODULE_0__.disableScroll)();
-      iterateMenuLinks();
     } else {
       burgerButton.setAttribute('aria-expanded', 'false');
       burgerButton.setAttribute('aria-label', 'открыть меню');
@@ -343,16 +339,16 @@ var burger = function burger() {
     overlay.classList.remove('overlay--active');
     checkClass();
   });
-  var iterateMenuLinks = function iterateMenuLinks() {
-    menuLinks.forEach(function (el) {
-      el.addEventListener('click', function () {
+  menuLinks.forEach(function (el) {
+    el.addEventListener('click', function () {
+      if (burgerButton.classList.contains('burger-button--active')) {
         burgerButton.classList.remove('burger-button--active');
         menu.classList.remove('burger-menu--active');
         overlay.classList.remove('overlay--active');
         (0,_utils_enable_scroll__WEBPACK_IMPORTED_MODULE_1__.enableScroll)();
-      });
+      }
     });
-  };
+  });
 };
 
 /***/ }),
