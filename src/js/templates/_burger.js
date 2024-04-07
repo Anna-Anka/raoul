@@ -12,7 +12,6 @@ export const burger = () => {
             burgerButton.setAttribute('aria-expanded', 'true');
             burgerButton.setAttribute('aria-label', 'закрыть меню');
             disableScroll();
-            iterateMenuLinks();
         } else {
             burgerButton.setAttribute('aria-expanded', 'false');
             burgerButton.setAttribute('aria-label', 'открыть меню');
@@ -34,14 +33,14 @@ export const burger = () => {
         checkClass();
     });
 
-    const iterateMenuLinks = () => {
-        menuLinks.forEach((el) => {
-            el.addEventListener('click', () => {
+    menuLinks.forEach((el) => {
+        el.addEventListener('click', () => {
+            if (burgerButton.classList.contains('burger-button--active')) {
                 burgerButton.classList.remove('burger-button--active');
                 menu.classList.remove('burger-menu--active');
                 overlay.classList.remove('overlay--active');
                 enableScroll();
-            });
+            }
         });
-    };
+    });
 };

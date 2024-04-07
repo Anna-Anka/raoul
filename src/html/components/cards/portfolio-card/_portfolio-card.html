@@ -5,12 +5,10 @@
                 @for (var i = 0; i < sliders.length; i++) { <li class="portfolio-card__item swiper-slide">
                     `+(sliders[i].media === 'video' ?
                     `@include("./_video-templay.html", {path: "${sliders[i].path}"})` :
-                    `@include("./_picture-templay.html", { path: "${sliders[i].path}" })`)+`
+                    `@include("./_picture-templay.html", { path: "${sliders[i].path}", dataFancybox: "${sliders[i].dataFancybox}", pathFancybox: "${sliders[i].pathFancybox}" })`)+`
                     </li>
                     }
             </ul>
-
-
             <button class="portfolio-card__button portfolio-card__button--prev swiper-button-prev" type="button">
             </button>
             <button class="portfolio-card__button portfolio-card__button--next swiper-button-next" type="button">
@@ -25,6 +23,8 @@
                     }
             </div>
         </div>
+
+        @if (typeof links !== 'undefined' && links) {
         <ul class="portfolio-card__links">
             @for (var i = 0; i < links.length; i++) { <li>
                 <a class="portfolio-card__link link-gradient" href=`+links[i].href+` target="_blank">
@@ -33,5 +33,6 @@
                 </li>
                 }
         </ul>
+        }
     </div>
 </article>

@@ -3,10 +3,8 @@
 	z-index: 20;
 	height: 81px;
 
-	&--fixed {
-		position: fixed;
-		transform: translateY(0);
-		transition: transform 0.35s ease-out;
+	@include mq(lg) {
+		height: 70px;
 	}
 
 	&__wrapper {
@@ -15,9 +13,8 @@
 		right: 0;
 		left: 0;
 		z-index: 10;
+		padding: 20px 0;
 		background-color: var(--color-dark-900);
-		@include adaptive-value-base('padding-top', 20, 20, 1);
-		@include adaptive-value-base('padding-bottom', 20, 20, 1);
 	}
 
 	.menu {
