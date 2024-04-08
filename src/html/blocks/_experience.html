@@ -30,38 +30,44 @@
                     </button>
                 </li>
             </ul>
-            <div class="tabs__content">
-                <div class="tabs__panel">
-                    @include('../components/cards/_experience-card.html', {
-                    'title' : 'Beast Hour',
-                    'year' : '2021',
-                    'text' : ['Работа над инди проектом стала первой в моем портфолио. Комьюнити-менеджемент сообщества игроков в VK и Discord; еженедельный сбор контента с плейтестов билда — о лучшем «вкатывании» я не мог и мечтать'],
-                    'href' : '#portfolio'
-                    })
-                </div>
-                <div class="tabs__panel">
-                    @include('../components/cards/_experience-card.html', {
-                    'title' : 'Starladder',
-                    'year' : '2022',
-                    'text' : ['Больше всего сил и труда я внёс в киберспортивное подразделение Starladder, штаб-квартира которого находится в Украине. Работа с крупнейшими игровыми турнирами по играм Dota 2, CS, PUBG Mobile; потрясающая команда ребят, всегда готовых подстраховать или помочь советом. Хочу отдельно поблагодарить моего тимлида @slavglory за кураторство турниров, в которых я принимал участие.'],
-                    'href' : '#'
-                    })
-                </div>
-                <div class="tabs__panel">
-                    @include('../components/cards/_experience-card.html', {
-                    'title' : 'Imversed',
-                    'year' : '2023',
-                    'text' : ['Не обошлось и без Web3 сферы: амбициозный проект Imversed, предлагающий к покупке виртуальные земли Нью-Йорка. Владельцы могли изменять их свойства и внешний вид, таким образом проецируя их собственный виртуальный кусочек Нью-Йорка в дополненную реальность.'],
-                    })
-                </div>
-                <div class="tabs__panel">
-                    @include('../components/cards/_experience-card.html', {
-                    'title' : 'Ritmi',
-                    'year' : '2024',
-                    'text' : ['Снова геймдев, уникальная идея на рынке. Рассказал игрокам о танцевальном приложении Ritmi с поддержкой гироскопа. Танцуй где угодно, танцуй не хуже вон того сумасшедшего чувака, не вылезающего с цифрового танцевального коврика.'],
-                    'href' : '#'
-                    })
-                </div>
+            <div class="tabs__swiper swiper">
+                <ul class="tabs__content swiper-wrapper">
+                    <li class="tabs__panel swiper-slide">
+                        @include('../components/cards/_experience-card.html', {
+                        'title' : 'Beast Hour',
+                        'year' : '2021',
+                        'text' : ['Работа над инди проектом стала первой в моем портфолио. Комьюнити-менеджемент сообщества игроков в VK и Discord; еженедельный сбор контента с плейтестов билда — о лучшем «вкатывании» я не мог и мечтать'],
+                        'href' : '#portfolio'
+                        })
+                    </li>
+                    <li class="tabs__panel swiper-slide">
+                        @include('../components/cards/_experience-card.html', {
+                        'title' : 'Starladder',
+                        'year' : '2022',
+                        'text' : ['Больше всего сил и труда я внёс в киберспортивное подразделение Starladder, штаб-квартира которого находится в Украине. Работа с крупнейшими игровыми турнирами по играм Dota 2, CS, PUBG Mobile; потрясающая команда ребят, всегда готовых подстраховать или помочь советом. Хочу отдельно поблагодарить моего тимлида @slavglory за кураторство турниров, в которых я принимал участие.'],
+                        'href' : '#'
+                        })
+                    </li>
+                    <li class="tabs__panel swiper-slide">
+                        @include('../components/cards/_experience-card.html', {
+                        'title' : 'Imversed',
+                        'year' : '2023',
+                        'text' : ['Не обошлось и без Web3 сферы: амбициозный проект Imversed, предлагающий к покупке виртуальные земли Нью-Йорка. Владельцы могли изменять их свойства и внешний вид, таким образом проецируя их собственный виртуальный кусочек Нью-Йорка в дополненную реальность.'],
+                        })
+                    </li>
+                    <li class="tabs__panel swiper-slide">
+                        @include('../components/cards/_experience-card.html', {
+                        'title' : 'Ritmi',
+                        'year' : '2024',
+                        'text' : ['Снова геймдев, уникальная идея на рынке. Рассказал игрокам о танцевальном приложении Ritmi с поддержкой гироскопа. Танцуй где угодно, танцуй не хуже вон того сумасшедшего чувака, не вылезающего с цифрового танцевального коврика.'],
+                        'href' : '#'
+                        })
+                    </li>
+                </ul>
+                <button class="experience__button experience__button--prev swiper-button-prev" type="button">
+                </button>
+                <button class="experience__button experience__button--next swiper-button-next" type="button">
+                </button>
             </div>
         </div>
     </div>

@@ -9,6 +9,7 @@
 
 		@include mq(lg) {
 			display: flex;
+			padding-top: 70px;
 		}
 
 		&::before {
@@ -101,34 +102,46 @@
 			}
 		}
 
+		&__swiper {
+			position: unset;
+		}
+
 		&__content {
 			width: 100%;
-			max-width: 600px;
 			font-size: 16px;
 
-			@include mq(lg) {
-				display: flex;
-				flex-direction: column;
-				gap: 24px;
-				max-width: 100%;
+			@include mq(lg, min) {
+				max-width: 600px;
 			}
 		}
 
 		&__panel {
 			&--active {
-				display: flex;
+				display: flex !important;
 			}
 
-			@include mq(lg) {
-				display: flex;
+			@include mq(lg, min) {
+				display: none;
 			}
+		}
+	}
 
-			&:not(:last-child) {
-				@include mq(lg) {
-					padding-bottom: 24px;
-					border-bottom: 1px solid var(--color-dark-600);
-				}
-			}
+	&__button {
+		top: 0;
+		bottom: unset;
+
+		&--prev {
+			left: 50%;
+			transform: translateX(-120%);
+		}
+
+		&--next {
+			right: 50%;
+			transform: translateX(120%);
+		}
+
+		@include mq(lg, min) {
+			display: none;
 		}
 	}
 }
