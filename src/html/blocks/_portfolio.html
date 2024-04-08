@@ -15,11 +15,6 @@
                         Видео монтаж
                     </button>
                 </li>
-                <li class="tabs__nav-item">
-                    <button class="tabs__nav-btn" data-hover="Контент-мейкер" type="button">
-                        Контент-мейкер
-                    </button>
-                </li>
             </ul>
             <div class="tabs__content">
                 <div class="tabs__panel">
@@ -69,6 +64,27 @@
                                     'text' : ['Знакомый моей подруги обратился ко мне с просьбой сделать ему ролик для его канала, по хайлайтам гонок Gran Turismo 7. Ему нужно было взять отрывок из трансляции и сделать хайлайт на 10-13 минут, повторив стиль предыдущих роликов.']
                                     })
                                 </li>
+                                <li class="portfolio__item swiper-slide">
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'video', path: 'dTk-D0dI6vU' }],
+                                    'title' : 'Ролик для благотворительной организации',
+                                    'text' : ['Индивидуальный заказ по созданию ролика для благотворительной организации Kind Hearts, посвященный поддержке малоимущих людей.']
+                                    })
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'video', path: '84rb0LdSE2U' }],
+                                    'title' : 'Вертикальный ролик для косплеера The Owlett',
+                                    'text' : ['Ролик по бекстейджам одной из съемок косплеера The Owlett (Йеннифэр из сериала Netflix).']
+                                    })
+                                </li>
+                                <li class="portfolio__item swiper-slide">
+                                    @include('../components/cards/portfolio-card/_portfolio-card.html', {
+                                    'sliders' : [{ media: 'video', path: 'Mf-qYnLC_9s' }, { media: 'video', path: 'FmgbEB0fGD4' }, { media: 'video', path: 'kgoD6-2iO-g' }],
+                                    'title' : 'Вертикальные ролики по видеоигре Ritmi в TikTok',
+                                    'text' : ['Один из многих Tiktok клипов, посвященный игровому процессу Ritmi, а также её стилистике.']
+                                    })
+                                </li>
                             </ul>
                             <button class="portfolio__button portfolio__button--prev swiper-button-prev" type="button">
                             </button>
@@ -77,8 +93,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="tabs__panel">content 3</div>
             </div>
         </div>
     </div>
