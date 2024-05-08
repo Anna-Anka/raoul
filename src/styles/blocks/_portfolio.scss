@@ -7,6 +7,10 @@
 	}
 
 	.tabs {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+
 		&__nav {
 			position: relative;
 			z-index: 10;
@@ -75,11 +79,9 @@
 
 	&__wrapper {
 		position: relative;
-		margin-top: -44px;
 		padding-top: 90px;
 
 		@include mq(md) {
-			margin-top: 0;
 			padding-top: 70px;
 		}
 	}
@@ -97,26 +99,53 @@
 	}
 
 	&__button {
-		top: 0;
+		top: 20px;
+
+		&::after {
+			animation: flashing 1.5s linear infinite;
+		}
 
 		&--next {
-			right: 0;
-
-			@include mq(md) {
-				right: 50%;
-				transform: translateX(120%);
-			}
+			right: 50%;
+			transform: translateX(125%);
 		}
 
 		&--prev {
 			right: 0;
-			left: unset;
+			left: 50%;
 			transform: translateX(-120%);
+		}
 
-			@include mq(md) {
-				right: unset;
-				left: 50%;
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					animation-play-state: paused;
+				}
 			}
 		}
+	}
+
+	.swiper-button-disabled {
+		&::after {
+			animation: none;
+		}
+	}
+}
+
+@keyframes flashing {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 0.3;
+	}
+	75% {
+		opacity: 0.6;
+	}
+	100% {
+		opacity: 1;
 	}
 }

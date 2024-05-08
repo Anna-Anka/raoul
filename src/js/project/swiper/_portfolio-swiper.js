@@ -17,7 +17,7 @@ if (document.querySelectorAll('.portfolio__swiper')) {
             breakpoints: {
                 767: {
                     slidesPerView: 2,
-                    slidesPerGroup: 2,
+                    slidesPerGroup: 1,
                     spaceBetween: 20,
                 },
 
