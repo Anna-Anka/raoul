@@ -100,10 +100,7 @@
 
 	&__button {
 		top: 20px;
-
-		&::after {
-			animation: flashing 1.5s linear infinite;
-		}
+		animation: flashing 1.5s linear infinite;
 
 		&--next {
 			right: 50%;
@@ -118,17 +115,17 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				&::after {
-					animation-play-state: paused;
-				}
+				animation-play-state: paused;
 			}
+		}
+
+		&--stop-animation {
+			animation: none;
 		}
 	}
 
 	.swiper-button-disabled {
-		&::after {
-			animation: none;
-		}
+		animation: none;
 	}
 }
 

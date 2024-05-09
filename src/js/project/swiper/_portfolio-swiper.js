@@ -4,6 +4,22 @@ import Swiper, {
 
 Swiper.use([Navigation]);
 
+if (document.querySelector('.portfolio__button--next') 
+    && document.querySelector('.portfolio__button--prev')
+) {
+    const prevButton = document.querySelector('.portfolio__button--prev');
+    const nextButton = document.querySelector('.portfolio__button--next');
+    prevButton.addEventListener('click', () => {
+        prevButton.classList.add('portfolio__button--stop-animation');
+        nextButton.classList.add('portfolio__button--stop-animation');
+    });
+
+    nextButton.addEventListener('click', () => {
+        prevButton.classList.add('portfolio__button--stop-animation');
+        nextButton.classList.add('portfolio__button--stop-animation');
+    });
+}
+
 if (document.querySelectorAll('.portfolio__swiper')) {
     const sliders = document.querySelectorAll('.portfolio__swiper');
     sliders.forEach((slider) => {
