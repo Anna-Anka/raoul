@@ -346,16 +346,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
-if (document.querySelector('.portfolio__button--next') && document.querySelector('.portfolio__button--prev')) {
-  var prevButton = document.querySelector('.portfolio__button--prev');
-  var nextButton = document.querySelector('.portfolio__button--next');
-  prevButton.addEventListener('click', function () {
-    prevButton.classList.add('portfolio__button--stop-animation');
-    nextButton.classList.add('portfolio__button--stop-animation');
-  });
-  nextButton.addEventListener('click', function () {
-    prevButton.classList.add('portfolio__button--stop-animation');
-    nextButton.classList.add('portfolio__button--stop-animation');
+if (document.querySelector('.portfolio__button')) {
+  var buttons = document.querySelectorAll('.portfolio__button');
+  var stopAnimation = function stopAnimation() {
+    buttons.forEach(function (button) {
+      return button.classList.add('portfolio__button--stop-animation');
+    });
+  };
+  buttons.forEach(function (button) {
+    button.addEventListener('click', stopAnimation);
   });
 }
 if (document.querySelectorAll('.portfolio__swiper')) {
