@@ -4,19 +4,15 @@ import Swiper, {
 
 Swiper.use([Navigation]);
 
-if (document.querySelector('.portfolio__button--next') 
-    && document.querySelector('.portfolio__button--prev')
-) {
-    const prevButton = document.querySelector('.portfolio__button--prev');
-    const nextButton = document.querySelector('.portfolio__button--next');
-    prevButton.addEventListener('click', () => {
-        prevButton.classList.add('portfolio__button--stop-animation');
-        nextButton.classList.add('portfolio__button--stop-animation');
-    });
+if (document.querySelector('.portfolio__button')) {
+    const buttons = document.querySelectorAll('.portfolio__button');
 
-    nextButton.addEventListener('click', () => {
-        prevButton.classList.add('portfolio__button--stop-animation');
-        nextButton.classList.add('portfolio__button--stop-animation');
+    const stopAnimation = () => {
+        buttons.forEach((button) => button.classList.add('portfolio__button--stop-animation'));
+    };
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', stopAnimation);
     });
 }
 
