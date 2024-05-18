@@ -1,2 +1,2 @@
 import './_include';
-import './project/swiper/_index';
+import './project/index';
