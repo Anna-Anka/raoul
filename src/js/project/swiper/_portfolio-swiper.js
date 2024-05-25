@@ -14,17 +14,17 @@ if (document.querySelectorAll('.portfolio__swiper')) {
                 prevEl: slider.querySelector('.portfolio__button--prev'),
             },
 
+            spaceBetween: 20,
+            slidesPerGroup: 1,
+            loop: true,
+
             breakpoints: {
                 767: {
-                    slidesPerView: 2.9,
-                    slidesPerGroup: 1,
-                    spaceBetween: 20,
+                    slidesPerView: 2,
                 },
 
                 320: {
                     slidesPerView: 1,
-                    slidesPerGroup: 1,
-                    spaceBetween: 20,
                 },
             },
 
