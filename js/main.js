@@ -135,24 +135,6 @@ if (document.querySelector('.portfolio__button')) {
     button.addEventListener('click', stopAnimation);
   });
 }
-if (document.querySelectorAll('.portfolio__wrapper')) {
-  var swipersAll = document.querySelectorAll('.portfolio__wrapper');
-  swipersAll.forEach(function (swiper) {
-    var etse = document.querySelectorAll('swiper-button-lock');
-    console.log(etse);
-    // const allButtons = swiper.querySelectorAll('.portfolio__button');
-    // const arr = Array.from(allButtons);
-    // console.log(arr);
-
-    // const test = arr.filter((button) => button.classList.contains('swiper-button-lock'));
-
-    // console.log(test);
-
-    // if (lockButtons.length) {
-    //     swiper.classList.add('portfolio__wrapper--margin');
-    // }
-  });
-}
 
 /***/ }),
 
@@ -411,6 +393,8 @@ if (document.querySelectorAll('.portfolio-card__swiper')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* eslint-disable */
+
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
 if (document.querySelectorAll('.portfolio__swiper')) {
@@ -424,7 +408,6 @@ if (document.querySelectorAll('.portfolio__swiper')) {
       },
       spaceBetween: 20,
       slidesPerGroup: 1,
-      loop: true,
       breakpoints: {
         767: {
           slidesPerView: 2
@@ -434,10 +417,36 @@ if (document.querySelectorAll('.portfolio__swiper')) {
         }
       },
       on: {
-        lock: function lock() {
-          var swiper = this.el;
-          var wrapper = swiper.closest('.portfolio__wrapper');
-          wrapper && wrapper.classList.add('portfolio__wrapper--margin');
+        init: function init(swiper) {
+          var element = swiper.el;
+          var wrapper = element.closest('.portfolio__wrapper');
+          if (wrapper) {
+            wrapper.classList.add('portfolio__wrapper--blackout-right');
+          }
+        },
+        slideChange: function slideChange(swiper) {
+          var wrapper = swiper.el.closest('.portfolio__wrapper');
+          if (wrapper) {
+            if (swiper.allowSlideNext) {
+              wrapper.classList.add('portfolio__wrapper--blackout-right');
+            } else {
+              wrapper.classList.remove('portfolio__wrapper--blackout-right');
+            }
+            if (swiper.allowSlidePrev) {
+              wrapper.classList.add('portfolio__wrapper--blackout-left');
+            } else {
+              wrapper.classList.remove('portfolio__wrapper--blackout-left');
+            }
+          }
+        },
+        lock: function lock(swiper) {
+          var element = swiper.el;
+          var wrapper = element.closest('.portfolio__wrapper');
+          if (wrapper) {
+            wrapper.classList.add('portfolio__wrapper--margin');
+            wrapper.classList.remove('portfolio__wrapper--blackout-left');
+            wrapper.classList.remove('portfolio__wrapper--blackout-right');
+          }
         }
       }
     });
