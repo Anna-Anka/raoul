@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Swiper, {
     Navigation,
 } from 'swiper';
@@ -16,7 +18,6 @@ if (document.querySelectorAll('.portfolio__swiper')) {
 
             spaceBetween: 20,
             slidesPerGroup: 1,
-            loop: true,
 
             breakpoints: {
                 767: {
@@ -29,12 +30,39 @@ if (document.querySelectorAll('.portfolio__swiper')) {
             },
 
             on: {
-                lock: function() {
-                    const swiper = this.el
-                    const wrapper = swiper.closest('.portfolio__wrapper')
-                    wrapper && wrapper.classList.add('portfolio__wrapper--margin')
-                }
-            }
+                init: function(swiper) {
+                    const element = swiper.el
+                    const wrapper = element.closest('.portfolio__wrapper')
+                    if (wrapper) {
+                        wrapper.classList.add('portfolio__wrapper--blackout-right')
+                    }
+                },
+                slideChange: function(swiper) {
+                    const wrapper = swiper.el.closest('.portfolio__wrapper')
+                    if (wrapper) {
+                        if (swiper.allowSlideNext) {
+                            wrapper.classList.add('portfolio__wrapper--blackout-right')
+                        } else {
+                            wrapper.classList.remove('portfolio__wrapper--blackout-right')
+                        }
+                        if (swiper.allowSlidePrev) {
+                            wrapper.classList.add('portfolio__wrapper--blackout-left')
+                        } else {
+                            wrapper.classList.remove('portfolio__wrapper--blackout-left')
+                        }
+                    }
+
+                },
+                lock: function(swiper) {
+                    const element = swiper.el
+                    const wrapper = element.closest('.portfolio__wrapper')
+                    if (wrapper) {
+                        wrapper.classList.add('portfolio__wrapper--margin')
+                        wrapper.classList.remove('portfolio__wrapper--blackout-left')
+                        wrapper.classList.remove('portfolio__wrapper--blackout-right')
+                    }
+                },
+            },
         });
     });
 }
