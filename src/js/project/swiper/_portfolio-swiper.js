@@ -6,6 +6,9 @@ import Swiper, {
 
 Swiper.use([Navigation]);
 
+const BLACKOUT_LEFT = 'portfolio__wrapper--blackout-left'
+const BLACKOUT_RIGHT = 'portfolio__wrapper--blackout-right'
+
 if (document.querySelectorAll('.portfolio__swiper')) {
     const sliders = document.querySelectorAll('.portfolio__swiper');
     sliders.forEach((slider) => {
@@ -34,21 +37,21 @@ if (document.querySelectorAll('.portfolio__swiper')) {
                     const element = swiper.el
                     const wrapper = element.closest('.portfolio__wrapper')
                     if (wrapper) {
-                        wrapper.classList.add('portfolio__wrapper--blackout-right')
+                        wrapper.classList.add(BLACKOUT_RIGHT)
                     }
                 },
                 slideChange: function(swiper) {
                     const wrapper = swiper.el.closest('.portfolio__wrapper')
                     if (wrapper) {
                         if (swiper.allowSlideNext) {
-                            wrapper.classList.add('portfolio__wrapper--blackout-right')
+                            wrapper.classList.add(BLACKOUT_RIGHT)
                         } else {
-                            wrapper.classList.remove('portfolio__wrapper--blackout-right')
+                            wrapper.classList.remove(BLACKOUT_RIGHT)
                         }
                         if (swiper.allowSlidePrev) {
-                            wrapper.classList.add('portfolio__wrapper--blackout-left')
+                            wrapper.classList.add(BLACKOUT_LEFT)
                         } else {
-                            wrapper.classList.remove('portfolio__wrapper--blackout-left')
+                            wrapper.classList.remove(BLACKOUT_LEFT)
                         }
                     }
 
@@ -58,8 +61,8 @@ if (document.querySelectorAll('.portfolio__swiper')) {
                     const wrapper = element.closest('.portfolio__wrapper')
                     if (wrapper) {
                         wrapper.classList.add('portfolio__wrapper--margin')
-                        wrapper.classList.remove('portfolio__wrapper--blackout-left')
-                        wrapper.classList.remove('portfolio__wrapper--blackout-right')
+                        wrapper.classList.remove(BLACKOUT_LEFT)
+                        wrapper.classList.remove(BLACKOUT_RIGHT)
                     }
                 },
             },
